@@ -1,17 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title>vue-buguapp</title>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but vue-buguapp doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="favicon-20180906044924321.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>布谷—基于区块链的娱乐平台</title>
+    <meta name="description" content="布谷，帮助小白用户能够快速了解区块链项目，为用户实时提供数字货币的行情预警">
+    <meta name="keywords" content="布谷，预警，行情，区块链信息查询，提醒，币价，行情预警，数字货币行情，数字货币预
+    警，数字货币行情预警，币价行情预警，币价行情预测，币安行情预警，火币行情预警，行
+    情反弹，大盘预测，OK行情预警，以太坊行情预警，比特币行情预警，EOS行情预警">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <style>
+    .weixin-tip{position: fixed;display:none;left:0; top:0; bottom:0; background: rgba(0,0,0,0.8); filter:alpha(opacity=80);z-index:999999; height: 100%; width: 100%;}
+    .weixin-tip p{text-align: center; margin-top: 10%; padding:0 5%;}
+    </style>
+</head>
+<body>
+        <div class="weixin-tip" id="app">
+                <p>
+                    <img src="images/live_weixin.png" width="100%" alt="微信打开"/>
+                </p>
+        </div>        
+    <div id="fullpage">
+        <div class="section" id="section0">
+                <div class="blogo  animated bounceInLeft"><img src="images/logo.png" /><span class="logoText">布谷</span></div>
+            <div class="picLeft">
+                    <div class="logo animated bounceInUp"><img src="images/logoT.png" /><p>基于区块链的娱乐平台</p></div>
+                    <div class="btns animated bounceInUp">
+                        <!-- <a href="itms-services://?action=download-manifest&url=https://bb.eqka.com/app/ios/manifest.plist" target="_blank" class="apple">iOS下载</a> -->
+                        <a href="javascript:;" onclick="opentip()" class="apple">iOS下载</a>
+                        <a href="https://bb.eqka.com/appFile/bugu-pro.apk" target="_blank" class="android">安卓下载</a>
+                    </div>
+            </div>
+            <div class="content">
+                    <img src="images/buguPic.png" />
+            </div>
+           
+        </div>
+        <div class="producti">
+                <h3>产品简介</h3>
+                <h6>Product introduction</h6>
+                <div class="productRight">布谷是基于区块链的互动娱乐APP，让用户持有的数字资产可在平台内通过游戏等休闲娱乐活动进行所有权流通。根据区块链的不可篡改，安全，可信任等特性，互动娱乐公平，公正，透明，让数字资产BGT持有者在互动娱乐中更安全、快捷、有趣，进而产生更大的流通价值。</div>
+                <div class="productLeft"><img src="images/jianjie-bg@3x.png" /></div>
+            </div>
+        <div class="productF">
+                <h3>布谷核心内容</h3>
+                <h6>Product function</h6>
+                <div class="threeWk">
+                    <div class="threepf">
+                        <div class="threenr">
+                            <img src="images/gongneng-left@3x.png" />
+                            <h3>进入区块链世界的入口</h3>
+                            <h6>布谷旨在打造全球用户进入区块链世界的入口。布谷基于区块链技术，让用户进入布谷即拥有便捷、有趣、安全的娱乐场景。</h6>
+                        </div>
+                    </div>
+                    <div class="threepf">
+                        <div class="threenr">
+                            <img src="images/gongneng-center@3x.png" />
+                            <h3>打造数字娱乐生态价值共同体</h3>
+                            <h6>布谷提供丰富的娱乐内容场景建设，激励用户积极参与布谷生态互动。布谷为用户提供公平，公正，透明，安全的底层技术服务，娱乐规则和用户行为数据将逐步上链，打造数字娱乐生态价值共同体。</h6>
+                        </div>
+                    </div>
+                    <div class="threepf">
+                        <div class="threenr">
+                            <img src="images/gongneng-right@3x.png" />
+                            <h3>行为产生价值，价值与用户共享</h3>
+                            <h6>用户在布谷中的所有行为，对布谷的生态建设产生贡献的，根据用户行为数据进行价值共享，实现平台与用户的双赢。</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="gzhqcode">
+            <img src="images/gzhhqrcode.jpg" />
+            <h3>关注微信公众号</h3>
+        </div>
+        <div class="footter">Copyright © 2018 - 2020 布谷 版权所有</div>
+    </div>
+    <div class="opentip animated bounceInDown">
+      <div class="clseico" onclick="closebtn()"><img src="images/icon-guanbi@2x.png" alt="closebtn" /></div>
+        <div class="bluttext">
+          因ios系统限制，安装后首次打开会提示“不受信任的企业和开发者”，为了能正常使用，请按下面步骤设置信任。          
+        </div>
+        <h1 style="margin:0 auto">
+          下载安装后，在  ＞＞通用＞＞设备管理中找到“Shaa...”＞＞点击信任 “ Shaa... ”
+      </h1>
+      <img src="images/img-xinren@2x.png" alt="iphone提示"  />
+      <h1 style="text-align:center">布谷公众号：布谷精灵</h1>
+      <a href="itms-services://?action=download-manifest&url=https://bb.eqka.com/app/ios/manifest.plist" target="_blank" class="downloadBtn">下载安装</a>
+    </div>
+</body>
+<script src="http://libs.baidu.com/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+	 /*  设备判断  */
+    function IsPC() {
+        var userAgentInfo = navigator.userAgent;
+        var Agents = ["Android", "iPhone",
+                "SymbianOS", "Windows Phone",
+                "iPad", "iPod"];
+        var flag = true;
+        for (var v = 0; v < Agents.length; v++) {
+            if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                flag = false;
+                break;
+            }
+        }
+        return flag;
+    };
+    document.querySelector(".android").href += "?"+Math.random();
+</script>		
+  <script type="text/javascript">
+  function opentip(){
+      $('.opentip').show();
+  };
+  function closebtn(){
+    $('.opentip').hide();
+  };
+	var _html = $(".weixin-tip").html();
+    // console.log(navigator.userAgent.indexOf("MicroMessenger"));
+    	if(navigator.userAgent.indexOf("MicroMessenger") >= 0){
+            setTimeout(function () {
+                $(".btns a").click(function(){
+                    $(".weixin-tip").show("");	
+                })
+            },1000)
+    	};
+	</script>
+
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?608b0a65b8e56906a85c21affdf93b37";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
 </html>
