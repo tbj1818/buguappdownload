@@ -18,7 +18,7 @@
     </style>
 </head>
 <body>
-        <div class="weixin-tip" id="app">
+        <div class="weixin-tip">
                 <p>
                     <img src="images/live_weixin.png" width="100%" alt="微信打开"/>
                 </p>
@@ -121,7 +121,7 @@
     // console.log(navigator.userAgent.indexOf("MicroMessenger"));
     	if(navigator.userAgent.indexOf("MicroMessenger") >= 0){
             setTimeout(function () {
-                $(".btns a").click(function(){
+                $(".btns a.android").click(function(){
                     $(".weixin-tip").show("");	
                 })
             },1000)
